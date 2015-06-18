@@ -1,0 +1,35 @@
+{
+  "xValues": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  "dataSets": [
+    {
+      "yValues": [
+        {
+          "value": 10,
+          "xIndex": 0,
+          "data": undefined
+        },
+        {
+          "value": 20,
+          "xIndex": 1,
+          "data": undefined
+        }
+      ],
+      "label": "This rules less"
+    },
+    {
+      "yValues": [
+        {
+          "value": 30,
+          "xIndex": 0,
+          "data": undefined
+        },
+        {
+          "value": 50,
+          "xIndex": 1,
+          "data": undefined
+        }
+      ],
+      "label": "This rules"
+    }
+  ]
+}

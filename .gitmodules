@@ -1,0 +1,3 @@
+[submodule "External/ios-charts"]
+	path = External/ios-charts
+	url = https://github.com/danielgindi/ios-charts.git
