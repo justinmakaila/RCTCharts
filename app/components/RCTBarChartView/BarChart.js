@@ -88,6 +88,11 @@ BarChart.propTypes = {
 		Whether the x-axis should draw gridlines
   	*/
   	xAxisDrawGridlinesEnabled: PropTypes.bool,
+
+  	/**
+		Whether or not values should be drawn above the bars
+  	*/
+  	drawValuesEnabled: PropTypes.bool
 };
 
 var RCTBarChart = requireNativeComponent('RCTBarChartView', BarChart)

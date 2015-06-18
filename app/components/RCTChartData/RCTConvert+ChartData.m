@@ -69,6 +69,8 @@
   
   NSString *label = json[@"label"];
   NSString *hexString = json[@"color"];
+  BOOL drawValues = json[@"drawValues"];
+
   UIColor *dataSetColor = [RCTConvert UIColor:hexString];
 
 
@@ -83,7 +85,9 @@
   NSLog(@"Bar chart data set:\n\tyValues: %@\n\tlabel: %@\n", chartDataEntries, label);
   
   BarChartDataSet *dataSet = [[BarChartDataSet alloc] initWithYVals:chartDataEntries label:label];
+  
   [dataSet setColor:dataSetColor];
+  [dataSet setDrawValuesEnabled:drawValues];
   
   return dataSet;
 }

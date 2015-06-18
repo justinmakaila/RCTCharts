@@ -1,6 +1,7 @@
 {
   "xValues": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-  "spacing": 3,
+  "spacing": 1,
+  "drawValues": false,
   "dataSets": [
     {
       "yValues": [
