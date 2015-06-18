@@ -53,9 +53,35 @@ RCT_EXPORT_VIEW_PROPERTY(drawValueAboveBarEnabled, BOOL)
 
 #pragma mark Legend
 
+RCT_CUSTOM_VIEW_PROPERTY(drawLegendEnabled, BOOL, BarChartView) {
+  
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(legendFormLineWidth, CGFloat, BarChartView) {
+  view.legend.formLineWidth = [RCTConvert CGFloat:json];
+}
+
 // The position of the legend
 RCT_CUSTOM_VIEW_PROPERTY(legendPosition, ChartLegendPosition, BarChartView) {
   view.legend.position = [RCTConvert NSInteger:json];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(legendForm, ChartLegendForm, BarChartView) {
+  view.legend.form = [RCTConvert NSInteger:json];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(legendFont, UIFont, BarChartView) {
+  NSString *fontName = [RCTConvert NSString:json];
+  CGFloat fontSize = view.legend.font.pointSize;
+
+  view.legend.font = [UIFont fontWithName:fontName size:fontSize];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(legendFontSize, CGFloat, BarChartView) {
+  NSString *fontName = view.legend.font.fontName;
+  CGFloat fontSize = [RCTConvert CGFloat:json];
+  
+  view.legend.font = [UIFont fontWithName:fontName size:fontSize];
 }
 
 #pragma mark X-Axis
@@ -78,6 +104,20 @@ RCT_CUSTOM_VIEW_PROPERTY(xAxisLabelPosition, xAxisLabelPosition, BarChartView) {
 // Whether gridlines should be drawn on the x-axis
 RCT_CUSTOM_VIEW_PROPERTY(xAxisDrawGridlinesEnabled, BOOL, BarChartView) {
   view.xAxis.drawGridLinesEnabled = [RCTConvert BOOL:json];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(xAxisFont, NSString, BarChartView) {
+  NSString *fontName = [RCTConvert NSString:json];
+  CGFloat fontSize = view.xAxis.labelFont.pointSize;
+  
+  view.xAxis.labelFont = [UIFont fontWithName:fontName size:fontSize];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(xAxisFontSize, CGFloat, BarChartView) {
+  NSString *fontName = view.xAxis.labelFont.fontName;
+  CGFloat fontSize = [RCTConvert CGFloat:json];
+  
+  view.xAxis.labelFont = [UIFont fontWithName:fontName size:fontSize];
 }
 
 @end

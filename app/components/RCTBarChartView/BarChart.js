@@ -58,11 +58,48 @@ BarChart.propTypes = {
 	*/
 	drawValueAboveBarEnabled: PropTypes.bool,
 
+	drawLegendEnabled: PropTypes.bool,
+
+	/**
+		The form of the legend.
+
+		enum ChartLegendForm {
+			Square = 0,
+			Circle = 1,
+			Line = 2
+		}
+	*/
+	legendForm: PropTypes.number,
+
+	/**
+		If legend form is set to line, the width of the line.
+	*/
+	legendFormLineWidth: PropTypes.number,
+
+	/**
+		The font used in the legend.
+	*/
+	legendFont: PropTypes.string,
+	legendFontSize: PropTypes.number,
+
 	/**
 		The position for the legend.
 
 		TODO: Use a string value instead of a number
 		A number is used for now because it maps directly to the enumeration.
+
+		enum ChartLegendPosition {
+			RightOfChart = 0,
+			RightOfChartCenter = 1,
+			RightOfChartInside = 2,
+			LeftOfChart = 3,
+			LeftOfChartCenter = 4,
+			LeftOfChartInside = 5,
+			BelowChartLeft = 6,
+			BelowChartRight = 7,
+			BelowChartCenter = 8,
+			PiechartCenter = 9,
+		}
 	*/
 	legendPosition: PropTypes.number,
 
@@ -88,6 +125,12 @@ BarChart.propTypes = {
 		Whether the x-axis should draw gridlines
   	*/
   	xAxisDrawGridlinesEnabled: PropTypes.bool,
+
+  	/**
+		The font used for the x-axis.
+  	*/
+  	xAxisFont: PropTypes.string,
+  	xAxisFontSize: PropTypes.number,
 
   	/**
 		Whether or not values should be drawn above the bars

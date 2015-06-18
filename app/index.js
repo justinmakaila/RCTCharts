@@ -9,6 +9,9 @@ var ChartData = require('./components/RCTChartData/RCTChartData.json')
 
 class App extends React.Component {
   render() {
+    var fontName = 'Avenir-Medium'
+    var fontSize = 13
+
     return (
       <View style={styles.container}>
         <BarChart 
@@ -19,11 +22,17 @@ class App extends React.Component {
           drawGridBackgroundEnabled={false}
           highlightEnabled={false}
           drawValueAboveBarEnabled={true}
+          legendForm={2}
+          legendFormLineWidth={3}
           legendPosition={8}
+          legendFont={fontName}
+          legendFontSize={fontSize}
           xAxisColor='#000'
           xAxisLineWidth={1.5}
           xAxisLabelPosition={1}
-          xAxisDrawGridlinesEnabled={false}/>
+          xAxisDrawGridlinesEnabled={false}
+          xAxisFont={fontName}
+          xAxisFontSize={fontSize}/>
       </View>
     )
   }
