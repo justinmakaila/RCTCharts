@@ -6,12 +6,12 @@
         {
           "value": 10,
           "xIndex": 0,
-          "data": undefined
+          "data": null
         },
         {
           "value": 20,
           "xIndex": 1,
-          "data": undefined
+          "data": null
         }
       ],
       "label": "This rules less"
@@ -21,12 +21,12 @@
         {
           "value": 30,
           "xIndex": 0,
-          "data": undefined
+          "data": null
         },
         {
           "value": 50,
           "xIndex": 1,
-          "data": undefined
+          "data": null
         }
       ],
       "label": "This rules"
