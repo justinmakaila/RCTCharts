@@ -48,3 +48,9 @@
 + (BarChartDataEntry *)BarChartDataEntry:(id)json;
 
 @end
+
+@interface RCTConvert (ChartLegendPosition)
+
++ (ChartLegendPosition)ChartLegendPosition:(id)json;
+
+@end

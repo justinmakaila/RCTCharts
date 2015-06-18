@@ -1,35 +1,74 @@
 {
-  "xValues": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  "xValues": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  "spacing": 3,
   "dataSets": [
     {
       "yValues": [
         {
           "value": 10,
           "xIndex": 0,
-          "data": null
         },
         {
           "value": 20,
           "xIndex": 1,
-          "data": null
-        }
+        },
+        { 
+          "value": 34,
+          "xIndex": 2
+        },
+        { 
+          "value": 34,
+          "xIndex": 3,
+        },
+        { 
+          "value": 34,
+          "xIndex": 4,
+        },
+                { 
+          "value": 100,
+          "xIndex": 5,
+        },
+        { 
+          "value": 120,
+          "xIndex": 6,
+        },
       ],
-      "label": "This rules less"
+      "label": "Time Spent",
+      "color": "#85c657"
     },
     {
       "yValues": [
         {
-          "value": 30,
+          "value": 50,
           "xIndex": 0,
-          "data": null
         },
         {
-          "value": 50,
+          "value": 74,
           "xIndex": 1,
-          "data": null
-        }
+        },
+        { 
+          "value": 34,
+          "xIndex": 2,
+        },
+        { 
+          "value": 46,
+          "xIndex": 3,
+        },
+        { 
+          "value": 37,
+          "xIndex": 4,
+        },
+        { 
+          "value": 80,
+          "xIndex": 5,
+        },
+        { 
+          "value": 100,
+          "xIndex": 6,
+        },
       ],
-      "label": "This rules"
+      "label": "Points Earned",
+      "color": "#00b5ec"
     }
   ]
 }

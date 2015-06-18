@@ -16,6 +16,11 @@ BarChart.propTypes = {
 	descriptionText: PropTypes.string,
 
 	/**
+		Whether or not to draw the background grid.
+	*/
+	drawGridBackgroundEnabled: PropTypes.bool,
+
+	/**
 		The color of the grid behind the bars.
 	*/
 	gridBackgroundColor: PropTypes.string,
@@ -41,8 +46,48 @@ BarChart.propTypes = {
 	data: PropTypes.shape({
 		xValues: PropTypes.arrayOf(PropTypes.string),
 		dataSets: PropTypes.array
-	})
-  
+	}),
+
+	/**
+		Whether highlight of individual data entries is enabled
+	*/
+	highlightEnabled: PropTypes.bool,
+
+	/**
+		Whether drawing of the value above the bar is enabled.
+	*/
+	drawValueAboveBarEnabled: PropTypes.bool,
+
+	/**
+		The position for the legend.
+
+		TODO: Use a string value instead of a number
+		A number is used for now because it maps directly to the enumeration.
+	*/
+	legendPosition: PropTypes.number,
+
+	/**
+		The color of the x-axis.
+	*/
+	xAxisColor: PropTypes.string,
+
+	/**
+		The width of the x-axis.
+	*/
+	xAxisLineWidth: PropTypes.number,
+
+	/**
+		The position of the labels on the x-axis
+
+		TODO: Use a string value instead of a number
+		A number is used for now because it maps directly to the enumeration.
+	*/
+	xAxisLabelPosition: PropTypes.number,
+
+  	/**
+		Whether the x-axis should draw gridlines
+  	*/
+  	xAxisDrawGridlinesEnabled: PropTypes.bool,
 };
 
 var RCTBarChart = requireNativeComponent('RCTBarChartView', BarChart)

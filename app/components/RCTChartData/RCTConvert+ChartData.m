@@ -68,9 +68,12 @@
   json = [self NSDictionary:json];
   
   NSString *label = json[@"label"];
+  NSString *hexString = json[@"color"];
+  UIColor *dataSetColor = [RCTConvert UIColor:hexString];
+
+
   NSArray *chartDataEntriesJSON = json[@"yValues"];
   NSMutableArray *chartDataEntries = [NSMutableArray array];
-  
   for (NSDictionary *entry in chartDataEntriesJSON) {
     BarChartDataEntry *dataEntry = [self BarChartDataEntry:entry];
     [chartDataEntries addObject:dataEntry];
@@ -79,7 +82,10 @@
   
   NSLog(@"Bar chart data set:\n\tyValues: %@\n\tlabel: %@\n", chartDataEntries, label);
   
-  return [[BarChartDataSet alloc] initWithYVals:chartDataEntries label:label];
+  BarChartDataSet *dataSet = [[BarChartDataSet alloc] initWithYVals:chartDataEntries label:label];
+  [dataSet setColor:dataSetColor];
+  
+  return dataSet;
 }
 
 @end
@@ -91,6 +97,9 @@
   
   NSArray *xValues = json[@"xValues"];
   NSArray *dataSetsJSON = json[@"dataSets"];
+  
+  CGFloat spacing = [RCTConvert CGFloat:json[@"spacing"]];
+  
   NSMutableArray *dataSets = [NSMutableArray array];
   
   for (NSDictionary *set in dataSetsJSON) {
@@ -100,7 +109,10 @@
   
   NSLog(@"Bar chart data:\n\txValues: %@\n\tdataSets: %@\n", xValues, dataSets);
   
-  return [[BarChartData alloc] initWithXVals:xValues dataSets:dataSets];
+  BarChartData *data = [[BarChartData alloc] initWithXVals:xValues dataSets:dataSets];
+  data.groupSpace = spacing;
+  
+  return data;
 } 
 
 @end

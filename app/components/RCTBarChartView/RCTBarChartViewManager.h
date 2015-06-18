@@ -8,6 +8,6 @@
 
 #import "RCTViewManager.h"
 
-@interface RCTBarChartView : RCTViewManager
+@interface RCTBarChartViewManager : RCTViewManager
 
 @end

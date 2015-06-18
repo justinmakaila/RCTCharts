@@ -14,8 +14,16 @@ class App extends React.Component {
         <BarChart 
           style={styles.barChart}
           data={ChartData}
-          descriptionText='Daily Progress'
-          groupSpace={8}/>
+          descriptionText=''
+          groupSpace={150}
+          drawGridBackgroundEnabled={false}
+          highlightEnabled={false}
+          drawValueAboveBarEnabled={true}
+          legendPosition={8}
+          xAxisColor='#000'
+          xAxisLineWidth={1.5}
+          xAxisLabelPosition={1}
+          xAxisDrawGridlinesEnabled={false}/>
       </View>
     )
   }
@@ -24,15 +32,15 @@ class App extends React.Component {
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0baf60',
+    backgroundColor: '#fff',
   },
   barChart: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
+    position:"absolute",
+    top: 200,
+    bottom: 200,
     left: 0,
-    backgroundColor: '#ae4f2e',
+    right: 0,
+    backgroundColor: "#fff"
   },
 })
 

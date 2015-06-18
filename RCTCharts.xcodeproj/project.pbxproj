@@ -24,7 +24,8 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		64828B761B330B68008B17EE /* RCTConvert+ChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 64828B751B330B68008B17EE /* RCTConvert+ChartData.m */; };
 		64828B841B330BB6008B17EE /* BarChart.js in Resources */ = {isa = PBXBuildFile; fileRef = 64828B811B330BB6008B17EE /* BarChart.js */; };
-		64828B851B330BB6008B17EE /* RCTBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64828B831B330BB6008B17EE /* RCTBarChartView.m */; };
+		64828B851B330BB6008B17EE /* RCTBarChartViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 64828B831B330BB6008B17EE /* RCTBarChartViewManager.m */; };
+		7C0483D21B33286B0029DE89 /* BarChartView+React.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0483D11B33286B0029DE89 /* BarChartView+React.m */; };
 		7C29C7C51B31B8590010EB86 /* ChartAnimationEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C29C7741B31B8590010EB86 /* ChartAnimationEasing.swift */; };
 		7C29C7C61B31B8590010EB86 /* ChartAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C29C7751B31B8590010EB86 /* ChartAnimator.swift */; };
 		7C29C7C71B31B8590010EB86 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C29C7771B31B8590010EB86 /* BarChartView.swift */; };
@@ -207,9 +208,11 @@
 		64828B741B330B68008B17EE /* RCTConvert+ChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RCTConvert+ChartData.h"; path = "app/components/RCTChartData/RCTConvert+ChartData.h"; sourceTree = "<group>"; };
 		64828B751B330B68008B17EE /* RCTConvert+ChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RCTConvert+ChartData.m"; path = "app/components/RCTChartData/RCTConvert+ChartData.m"; sourceTree = "<group>"; };
 		64828B811B330BB6008B17EE /* BarChart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = BarChart.js; path = app/components/RCTBarChartView/BarChart.js; sourceTree = SOURCE_ROOT; };
-		64828B821B330BB6008B17EE /* RCTBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTBarChartView.h; path = app/components/RCTBarChartView/RCTBarChartView.h; sourceTree = SOURCE_ROOT; };
-		64828B831B330BB6008B17EE /* RCTBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTBarChartView.m; path = app/components/RCTBarChartView/RCTBarChartView.m; sourceTree = SOURCE_ROOT; };
+		64828B821B330BB6008B17EE /* RCTBarChartViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTBarChartViewManager.h; path = app/components/RCTBarChartView/RCTBarChartViewManager.h; sourceTree = SOURCE_ROOT; };
+		64828B831B330BB6008B17EE /* RCTBarChartViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTBarChartViewManager.m; path = app/components/RCTBarChartView/RCTBarChartViewManager.m; sourceTree = SOURCE_ROOT; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7C0483D01B33286B0029DE89 /* BarChartView+React.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BarChartView+React.h"; path = "app/components/RCTBarChartView/BarChartView+React.h"; sourceTree = SOURCE_ROOT; };
+		7C0483D11B33286B0029DE89 /* BarChartView+React.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BarChartView+React.m"; path = "app/components/RCTBarChartView/BarChartView+React.m"; sourceTree = SOURCE_ROOT; };
 		7C29C7741B31B8590010EB86 /* ChartAnimationEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartAnimationEasing.swift; sourceTree = "<group>"; };
 		7C29C7751B31B8590010EB86 /* ChartAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartAnimator.swift; sourceTree = "<group>"; };
 		7C29C7771B31B8590010EB86 /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
@@ -573,9 +576,11 @@
 		7C29C8101B31B89C0010EB86 /* RCTBarChartView */ = {
 			isa = PBXGroup;
 			children = (
+				7C0483D01B33286B0029DE89 /* BarChartView+React.h */,
+				7C0483D11B33286B0029DE89 /* BarChartView+React.m */,
 				64828B811B330BB6008B17EE /* BarChart.js */,
-				64828B821B330BB6008B17EE /* RCTBarChartView.h */,
-				64828B831B330BB6008B17EE /* RCTBarChartView.m */,
+				64828B821B330BB6008B17EE /* RCTBarChartViewManager.h */,
+				64828B831B330BB6008B17EE /* RCTBarChartViewManager.m */,
 			);
 			name = RCTBarChartView;
 			path = components/RCTBarChartView;
@@ -923,6 +928,7 @@
 				7C29C7EB1B31B8590010EB86 /* LineRadarChartDataSet.swift in Sources */,
 				7C29C80B1B31B8590010EB86 /* ChartSelInfo.swift in Sources */,
 				7C29C7F71B31B8590010EB86 /* ChartAxisRendererBase.swift in Sources */,
+				7C0483D21B33286B0029DE89 /* BarChartView+React.m in Sources */,
 				7C29C7D01B31B8590010EB86 /* PieRadarChartViewBase.swift in Sources */,
 				7C29C80F1B31B8590010EB86 /* ChartViewPortHandler.swift in Sources */,
 				7C29C7D91B31B8590010EB86 /* ChartYAxis.swift in Sources */,
@@ -951,7 +957,7 @@
 				7C29C7EC1B31B8590010EB86 /* PieChartData.swift in Sources */,
 				7C29C80A1B31B8590010EB86 /* ChartHighlight.swift in Sources */,
 				7C29C7F81B31B8590010EB86 /* ChartDataRendererBase.swift in Sources */,
-				64828B851B330BB6008B17EE /* RCTBarChartView.m in Sources */,
+				64828B851B330BB6008B17EE /* RCTBarChartViewManager.m in Sources */,
 				7C29C7D41B31B8590010EB86 /* ChartComponentBase.swift in Sources */,
 				7C29C8091B31B8590010EB86 /* ChartFillFormatter.swift in Sources */,
 				7C29C8031B31B8590010EB86 /* HorizontalBarChartRenderer.swift in Sources */,
