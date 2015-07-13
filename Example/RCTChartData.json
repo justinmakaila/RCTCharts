@@ -1,5 +1,5 @@
 {
-  "xValues": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  "xValues": ["Mon\n7/1", "Tue\n7/3", "Wed\n7/4", "Thu\n7/5", "Fri\n7/6", "Sat\n7/7", "Sun\n7/8"],
   "spacing": 1,
   "drawValues": false,
   "dataSets": [
@@ -14,62 +14,58 @@
           "xIndex": 1,
         },
         { 
-          "value": 34,
+          "value": 13,
           "xIndex": 2
         },
         { 
-          "value": 34,
+          "value": 16,
           "xIndex": 3,
         },
         { 
-          "value": 34,
+          "value": 18,
           "xIndex": 4,
         },
                 { 
-          "value": 100,
+          "value": 10,
           "xIndex": 5,
         },
         { 
-          "value": 120,
+          "value": 12,
           "xIndex": 6,
         },
-      ],
-      "label": "Time Spent",
-      "color": "#85c657"
+      ]
     },
     {
       "yValues": [
         {
-          "value": 50,
+          "value": 8,
           "xIndex": 0,
         },
         {
-          "value": 74,
+          "value": 10,
           "xIndex": 1,
         },
         { 
-          "value": 34,
+          "value": 15,
           "xIndex": 2,
         },
         { 
-          "value": 46,
+          "value": 13,
           "xIndex": 3,
         },
         { 
-          "value": 37,
+          "value": 18,
           "xIndex": 4,
         },
         { 
-          "value": 80,
+          "value": 19,
           "xIndex": 5,
         },
         { 
-          "value": 100,
+          "value": 10,
           "xIndex": 6,
         },
-      ],
-      "label": "Points Earned",
-      "color": "#00b5ec"
+      ]
     }
   ]
 }

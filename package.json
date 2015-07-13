@@ -1,11 +1,21 @@
 {
-  "name": "RCTCharts",
+  "name": "rctcharts",
   "version": "0.0.1",
-  "private": true,
+  "description": "A react-native port of ios-charts. Currently only has support for Bar Charts.",
+  "main": "RCTBarChart.ios.js",
   "scripts": {
     "start": "node_modules/react-native/packager/packager.sh"
   },
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/justinmakaila/rctcharts.git"
+  },
+  "author": "Justin Makaila",
+  "license": "MIT",
   "dependencies": {
-    "react-native": "^0.5.0"
-  }
+    "react-native": "^0.7.1"
+  },
+  "keywords": [
+  	"react-native", "chart", "barchart", "react-component"
+  ]
 }

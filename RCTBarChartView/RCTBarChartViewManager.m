@@ -14,7 +14,7 @@ RCT_EXPORT_MODULE()
 - (UIView*)view {
   BarChartView *chartView = [[BarChartView alloc] init];
   chartView.rightAxis.enabled = NO;
-  chartView.leftAxis.enabled = NO;
+  chartView.leftAxis.enabled = YES;
   
   return chartView;
 }
@@ -118,6 +118,42 @@ RCT_CUSTOM_VIEW_PROPERTY(xAxisFontSize, CGFloat, BarChartView) {
   CGFloat fontSize = [RCTConvert CGFloat:json];
   
   view.xAxis.labelFont = [UIFont fontWithName:fontName size:fontSize];
+}
+
+#pragma mark Y-Axis
+
+// The color of the y-axis
+RCT_CUSTOM_VIEW_PROPERTY(yAxisColor, UIColor, BarChartView) {
+  view.leftAxis.axisLineColor = [RCTConvert UIColor:json];
+}
+
+// The width of the y-axis
+RCT_CUSTOM_VIEW_PROPERTY(yAxisLineWidth, CGFloat, BarChartView) {
+  view.leftAxis.axisLineWidth = [RCTConvert CGFloat:json];
+}
+
+// The position of the labels of the y-axis
+RCT_CUSTOM_VIEW_PROPERTY(yAxisLabelPosition, xAxisLabelPosition, BarChartView) {
+  view.leftAxis.labelPosition = [RCTConvert NSInteger:json];
+}
+
+// Whether gridlines should be drawn on the y-axis
+RCT_CUSTOM_VIEW_PROPERTY(yAxisDrawGridlinesEnabled, BOOL, BarChartView) {
+  view.leftAxis.drawGridLinesEnabled = [RCTConvert BOOL:json];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(yAxisFont, NSString, BarChartView) {
+  NSString *fontName = [RCTConvert NSString:json];
+  CGFloat fontSize = view.leftAxis.labelFont.pointSize;
+  
+  view.leftAxis.labelFont = [UIFont fontWithName:fontName size:fontSize];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(yAxisFontSize, CGFloat, BarChartView) {
+  NSString *fontName = view.leftAxis.labelFont.fontName;
+  CGFloat fontSize = [RCTConvert CGFloat:json];
+  
+  view.leftAxis.labelFont = [UIFont fontWithName:fontName size:fontSize];
 }
 
 @end
